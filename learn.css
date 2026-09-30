@@ -1,0 +1,1340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #14263d;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 741px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.small {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 3.3%;
+    z-index: 1000;
+}
+
+.topic {
+    width: 100%;
+    height: 70px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 2px solid #111111;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    flex-shrink: 0;
+    margin-right: 55px;
+    font-size: 24px;
+    color: #111111;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.topic a {
+    position: relative;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.topic a:hover {
+    color: #315c36;
+}
+
+.topic a.active {
+    color: #315c36;
+    font-weight: 700;
+}
+
+.topic a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    height: 3px;
+    background: #315c36;
+    border-radius: 5px;
+}
+
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.search {
+    font-size: 18px;
+    color: #111111;
+    cursor: pointer;
+}
+
+.topic button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #111111;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.learn-content {
+    position: absolute;
+    top: 135px;
+    left: 5.3%;
+    width: 52%;
+    max-width: 850px;
+    z-index: 5;
+}
+
+.learning-label {
+    width: fit-content;
+    padding: 8px 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: rgba(230, 243, 237, 0.88);
+    color: #173b36;
+    font-size: 13px;
+    font-weight: 700;
+    backdrop-filter: blur(5px);
+}
+
+.learning-label i {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #0aaf72;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.learn-content h1 {
+    width: 100%;
+    max-width: 780px;
+    margin-top: 22px;
+    font-size: clamp(52px, 5vw, 76px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    color: #14263d;
+    font-weight: 800;
+}
+
+.learn-content h1 span {
+    color: #087457;
+}
+
+.description {
+    width: 100%;
+    max-width: 690px;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: #536f8d;
+}
+
+.learning-points {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    gap: 18px;
+    margin-top: 42px;
+}
+
+.learning-point {
+    min-width: 0;
+    text-align: center;
+}
+
+.point-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 24px;
+}
+
+.learning-point:nth-child(1) .point-icon {
+    background: #dcf5e7;
+    color: #159b5c;
+}
+
+.learning-point:nth-child(2) .point-icon {
+    background: #fff0c9;
+    color: #efa900;
+}
+
+.learning-point:nth-child(3) .point-icon {
+    background: #dcecff;
+    color: #377ee8;
+}
+
+.learning-point:nth-child(4) .point-icon {
+    background: #ffe0e5;
+    color: #e85a6a;
+}
+
+.learning-point h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #263649;
+}
+
+.learning-point p {
+    font-size: 12px;
+    line-height: 17px;
+    color: #69778a;
+}
+
+.personinright {
+    width: 88%;
+    min-height: 230px;
+    margin: 0 auto 45px;
+    padding: 0 5% 0 25%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    overflow: hidden;
+    background-color: #eef4f1;
+    background-image: url("./personinright.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #d7e5de;
+    border-radius: 26px;
+}
+
+.learning-matters-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.why-learning-label {
+    width: fit-content;
+    padding: 7px 13px;
+    margin-bottom: 12px;
+    border-radius: 7px;
+    background: #dce9e3;
+    color: #3d5f55;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.learning-matters-content h2 {
+    margin-bottom: 12px;
+    font-size: clamp(24px, 2.2vw, 32px);
+    line-height: 1.18;
+    color: #172b42;
+}
+
+.learning-matters-content p {
+    max-width: 650px;
+    font-size: 12px;
+    line-height: 1.65;
+    color: #687684;
+}
+
+.learning-benefits {
+    width: 280px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.benefit-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e0f1e8;
+    color: #15905f;
+    font-size: 15px;
+}
+
+.benefit-item span {
+    font-size: 12px;
+    line-height: 16px;
+    color: #536270;
+}
+
+.journey-section {
+    width: 88%;
+    margin: 0 auto;
+    padding: 0 0 45px;
+}
+
+.journey-heading {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 27px;
+}
+
+.journey-heading h2 {
+    margin-bottom: 6px;
+    font-size: 30px;
+    color: #14263d;
+}
+
+.journey-heading p {
+    font-size: 13px;
+    color: #71808d;
+}
+
+.journey-quote {
+    text-align: right;
+}
+
+.journey-quote p {
+    font-size: 13px;
+    line-height: 19px;
+    color: #536070;
+    font-style: italic;
+}
+
+.journey {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.journey-item {
+    position: relative;
+    flex: 1;
+    min-height: 100px;
+    text-align: left;
+}
+
+.journey-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+    background: #16845b;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.journey-line {
+    position: absolute;
+    top: 18px;
+    left: 36px;
+    right: 0;
+    height: 1px;
+    background: #79bfa2;
+}
+
+.journey-item h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #14263d;
+}
+
+.journey-item p {
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 16px;
+    color: #778391;
+}
+
+.learning-banner {
+    width: 88%;
+    height: 175px;
+    margin: 0 auto 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.learning-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-quote {
+    position: absolute;
+    top: 32px;
+    left: 35px;
+    color: #ffffff;
+}
+
+.banner-quote i {
+    margin-bottom: 7px;
+    font-size: 27px;
+    color: #70c99a;
+}
+
+.banner-quote p {
+    font-size: 13px;
+    line-height: 19px;
+    font-style: italic;
+}
+
+.banner-quote span {
+    display: block;
+    margin-top: 6px;
+    font-size: 10px;
+}
+
+.banner-message {
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    color: #ffffff;
+    text-align: center;
+    transform: rotate(-7deg);
+}
+
+.banner-message p {
+    font-size: 15px;
+    line-height: 19px;
+    font-style: italic;
+}
+
+.resources-section {
+    width: 88%;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+.resources-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.resources-heading h2 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #14263d;
+}
+
+.resources-heading p {
+    font-size: 13px;
+    color: #78838e;
+}
+
+.resources-heading a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #16845b;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.resources {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 25px;
+}
+
+.resource {
+    text-align: center;
+}
+
+.resource-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.articles {
+    background: #dff4e7;
+    color: #15935c;
+}
+
+.videos {
+    background: #e2efff;
+    color: #397de0;
+}
+
+.podcasts {
+    background: #fff0cc;
+    color: #efa900;
+}
+
+.books {
+    background: #eee5ff;
+    color: #8361c8;
+}
+
+.courses {
+    background: #ffe5e8;
+    color: #ed6170;
+}
+
+.projects {
+    background: #dff4e8;
+    color: #13925b;
+}
+
+.resource h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #263649;
+}
+
+.resource p {
+    font-size: 10px;
+    line-height: 14px;
+    color: #78838e;
+}
+
+.habit-section {
+    width: 88%;
+    min-height: 90px;
+    margin: 0 auto 35px;
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 14px;
+    background: #e8f7e9;
+}
+
+.habit-icon {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #18785a;
+}
+
+.habit-content {
+    flex: 1;
+}
+
+.habit-content h2 {
+    margin-bottom: 4px;
+    font-size: 19px;
+    color: #14263d;
+}
+
+.habit-content p {
+    font-size: 11px;
+    color: #6c7b75;
+}
+
+.habit-section button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #064b38;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.habit-section button i {
+    margin-left: 6px;
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.learn-content {
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 38%;
+}
+
+.learning-points {
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+}
+
+.personinright {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+}
+
+.journey-section {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+}
+
+.learning-banner {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+}
+
+.resources-section {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 42%;
+}
+
+.habit-section {
+    opacity: 0;
+    transform: translateY(90px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+.learning-point {
+    opacity: 0;
+    transform: translateY(60px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+
+.learning-point:nth-child(1) {
+    animation-range: entry 0% cover 30%;
+}
+
+.learning-point:nth-child(2) {
+    animation-range: entry 5% cover 35%;
+}
+
+.learning-point:nth-child(3) {
+    animation-range: entry 10% cover 40%;
+}
+
+.learning-point:nth-child(4) {
+    animation-range: entry 15% cover 45%;
+}
+
+.learning-matters-content {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 38%;
+}
+
+.learning-benefits {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 45%;
+}
+
+.benefit-item {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+
+.benefit-item:nth-child(1) {
+    animation-range: entry 0% cover 28%;
+}
+
+.benefit-item:nth-child(2) {
+    animation-range: entry 5% cover 33%;
+}
+
+.benefit-item:nth-child(3) {
+    animation-range: entry 10% cover 38%;
+}
+
+.benefit-item:nth-child(4) {
+    animation-range: entry 15% cover 43%;
+}
+
+.journey-heading {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.journey-item {
+    opacity: 0;
+    transform: translateY(60px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+
+.journey-item:nth-child(1) {
+    animation-range: entry 0% cover 28%;
+}
+
+.journey-item:nth-child(2) {
+    animation-range: entry 5% cover 33%;
+}
+
+.journey-item:nth-child(3) {
+    animation-range: entry 10% cover 38%;
+}
+
+.journey-item:nth-child(4) {
+    animation-range: entry 15% cover 43%;
+}
+
+.banner-quote {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.banner-message {
+    opacity: 0;
+    transform: translateY(55px) rotate(-7deg);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 8% cover 43%;
+}
+
+.resources-heading {
+    opacity: 0;
+    transform: translateY(55px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.resource {
+    opacity: 0;
+    transform: translateY(60px);
+    animation-name: revealOnScroll;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: view();
+}
+
+.resource:nth-child(1) {
+    animation-range: entry 0% cover 28%;
+}
+
+.resource:nth-child(2) {
+    animation-range: entry 4% cover 32%;
+}
+
+.resource:nth-child(3) {
+    animation-range: entry 8% cover 36%;
+}
+
+.resource:nth-child(4) {
+    animation-range: entry 12% cover 40%;
+}
+
+.resource:nth-child(5) {
+    animation-range: entry 16% cover 44%;
+}
+
+.resource:nth-child(6) {
+    animation-range: entry 20% cover 48%;
+}
+
+@keyframes revealOnScroll {
+    0% {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+
+    20% {
+        opacity: 0.15;
+        transform: translateY(65px);
+    }
+
+    40% {
+        opacity: 0.4;
+        transform: translateY(40px);
+    }
+
+    60% {
+        opacity: 0.65;
+        transform: translateY(20px);
+    }
+
+    80% {
+        opacity: 0.9;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .nav {
+        height: 700px;
+    }
+
+    .learn-content {
+        top: 125px;
+        left: 5%;
+        width: 55%;
+    }
+
+    .learn-content h1 {
+        font-size: clamp(48px, 5.2vw, 68px);
+    }
+
+    .description {
+        max-width: 600px;
+        font-size: 17px;
+    }
+
+    .learning-points {
+        gap: 10px;
+        margin-top: 32px;
+    }
+
+    .learning-point h3 {
+        font-size: 13px;
+    }
+
+    .learning-point p {
+        font-size: 11px;
+    }
+
+    .point-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .logo {
+        margin-right: 30px;
+    }
+
+    .personinright,
+    .journey-section,
+    .learning-banner,
+    .resources-section,
+    .habit-section {
+        width: 90%;
+    }
+
+    .resources {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .nav {
+        height: 680px;
+    }
+
+    .small {
+        padding: 0 2%;
+    }
+
+    .topic {
+        padding: 0 18px;
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .topic a {
+        font-size: 12px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .topic button {
+        padding: 10px 15px;
+    }
+
+    .learn-content {
+        top: 125px;
+        left: 4%;
+        width: 59%;
+    }
+
+    .learning-label {
+        padding: 7px 14px;
+    }
+
+    .learning-label i {
+        width: 29px;
+        height: 29px;
+    }
+
+    .learn-content h1 {
+        font-size: clamp(43px, 6vw, 58px);
+        letter-spacing: -2px;
+    }
+
+    .description {
+        max-width: 520px;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-top: 20px;
+    }
+
+    .learning-points {
+        margin-top: 30px;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .point-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 19px;
+    }
+
+    .learning-point h3 {
+        font-size: 11px;
+    }
+
+    .learning-point p {
+        font-size: 9px;
+        line-height: 13px;
+    }
+
+    .personinright {
+        padding-left: 20%;
+        gap: 30px;
+    }
+
+    .learning-benefits {
+        width: 220px;
+    }
+
+    .journey-heading {
+        gap: 20px;
+    }
+
+    .journey-heading h2,
+    .resources-heading h2 {
+        font-size: 25px;
+    }
+
+    .resources {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 30px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .nav {
+        height: auto;
+        min-height: 760px;
+    }
+
+    .hero-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .small {
+        top: 10px;
+        padding: 0 12px;
+    }
+
+    .topic {
+        height: 58px;
+        padding: 0 15px;
+        border-radius: 14px;
+    }
+
+    .logo {
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 10px;
+    }
+
+    .search {
+        font-size: 16px;
+    }
+
+    .topic button {
+        padding: 9px 13px;
+        font-size: 11px;
+    }
+
+    .learn-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: none;
+        min-height: 760px;
+        padding: 100px 25px 40px;
+    }
+
+    .learning-label {
+        font-size: 12px;
+    }
+
+    .learning-label i {
+        width: 30px;
+        height: 30px;
+    }
+
+    .learn-content h1 {
+        width: 100%;
+        font-size: clamp(42px, 12vw, 58px);
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .description {
+        width: 100%;
+        max-width: 500px;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .learning-points {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 15px;
+        margin-top: 40px;
+    }
+
+    .point-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 21px;
+    }
+
+    .learning-point h3 {
+        font-size: 14px;
+    }
+
+    .learning-point p {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .personinright {
+        width: 92%;
+        padding: 35px 25px;
+        min-height: 450px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 25px;
+        background-position: top center;
+    }
+
+    .learning-matters-content {
+        width: 100%;
+    }
+
+    .learning-matters-content p {
+        font-size: 12px;
+    }
+
+    .learning-benefits {
+        width: 100%;
+    }
+
+    .journey-section {
+        width: 92%;
+    }
+
+    .journey-heading {
+        flex-direction: column;
+    }
+
+    .journey-quote {
+        text-align: left;
+    }
+
+    .journey {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .journey-item {
+        width: 100%;
+        min-height: 75px;
+        padding-left: 50px;
+    }
+
+    .journey-number {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .journey-line {
+        display: none;
+    }
+
+    .learning-banner {
+        width: 92%;
+        height: 220px;
+    }
+
+    .banner-quote {
+        top: 25px;
+        left: 25px;
+        max-width: 55%;
+    }
+
+    .banner-message {
+        top: 120px;
+        right: 25px;
+    }
+
+    .resources-section {
+        width: 92%;
+    }
+
+    .resources-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .resources {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+
+    .habit-section {
+        width: 92%;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .habit-content {
+        min-width: calc(100% - 85px);
+    }
+
+    .habit-section button {
+        margin-left: 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .scroll-reveal,
+    .learn-content,
+    .learning-points,
+    .learning-point,
+    .personinright,
+    .learning-matters-content,
+    .learning-benefits,
+    .benefit-item,
+    .journey-section,
+    .journey-heading,
+    .journey-item,
+    .learning-banner,
+    .banner-quote,
+    .banner-message,
+    .resources-section,
+    .resources-heading,
+    .resource,
+    .habit-section {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}
+
+@supports not (animation-timeline: view()) {
+
+    .scroll-reveal,
+    .learn-content,
+    .learning-points,
+    .learning-point,
+    .personinright,
+    .learning-matters-content,
+    .learning-benefits,
+    .benefit-item,
+    .journey-section,
+    .journey-heading,
+    .journey-item,
+    .learning-banner,
+    .banner-quote,
+    .banner-message,
+    .resources-section,
+    .resources-heading,
+    .resource,
+    .habit-section {
+        opacity: 1;
+        transform: none;
+        animation: none;
+    }
+}

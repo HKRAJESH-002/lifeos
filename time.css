@@ -1,0 +1,818 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #111;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+}
+
+.topic a {
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+}
+
+.topic a:hover {
+    color: #315c36;
+}
+
+.nav {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.small {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.topic {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #111;
+    background: #ffffff;
+    border: 2px solid #111;
+    border-radius: 10px;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 22px;
+}
+
+.topic div {
+    cursor: pointer;
+}
+
+.search {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-content {
+    width: 100%;
+    min-height: 0;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.hero-text {
+    margin-left: 6.5%;
+    width: 480px;
+    margin-top: 0;
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #d5eee8;
+    color: #087d62;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.hero-text h1 {
+    color: #102443;
+    font-size: 47px;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.hero-text h1 span {
+    color: #078267;
+    display: inline-block;
+    border-bottom: 3px solid #078267;
+    padding-bottom: 3px;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    color: #526681;
+    font-size: 16px;
+    line-height: 23px;
+    max-width: 430px;
+}
+
+
+.principles-section {
+    position: relative;
+    z-index: 3;
+    padding: 28px 5% 35px;
+    background: #ffffff;
+}
+
+.principles {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.principle-card {
+    min-height: 160px;
+    border: 1px solid #dcebe7;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 15px;
+    background: rgba(255, 255, 255, 0.85);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(22, 90, 73, 0.09);
+}
+
+.principle-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.calendar-icon {
+    background: #d9f0e9;
+    color: #078267;
+}
+
+.focus-icon {
+    background: #fff0c9;
+    color: #f0ae18;
+}
+
+.productive-icon {
+    background: #e4ddff;
+    color: #6651d8;
+}
+
+.life-icon {
+    background: #ffe0e2;
+    color: #e94e5d;
+}
+
+.principle-card h3 {
+    color: #102443;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.principle-card p {
+    color: #5e6c80;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+
+.clock-section {
+    min-height: 610px;
+    position: relative;
+    padding: 25px 5% 55px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #f4fbf8 0%,
+            #ffffff 58%
+        );
+}
+
+.clock-intro {
+    position: absolute;
+    left: 8%;
+    top: 115px;
+    z-index: 4;
+}
+
+.clock-intro h2 {
+    color: #102443;
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: 500;
+    font-style: italic;
+    font-family: Georgia, serif;
+}
+
+.intro-line {
+    width: 82px;
+    height: 3px;
+    background: #087d62;
+    transform: rotate(-8deg);
+    margin-top: 15px;
+}
+
+
+.clock-system {
+    width: 760px;
+    height: 540px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.clock-container {
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    left: 195px;
+    top: 80px;
+}
+
+.clock-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+.clock-center-content {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 130px;
+    color: #102443;
+    pointer-events: none;
+}
+
+.mini-logo {
+    color: #087d62;
+    font-size: 20px;
+    transform: rotate(-25deg);
+    margin-bottom: 3px;
+}
+
+.clock-center-content strong {
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.clock-center-content span {
+    display: block;
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+
+.clock-hand {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: 50% 100%;
+    z-index: 4;
+    border-radius: 10px;
+}
+
+.hour-hand {
+    width: 7px;
+    height: 72px;
+    margin-left: -3.5px;
+    background: #0b735d;
+    animation: rotateHour 43200s linear infinite;
+}
+
+.minute-hand {
+    width: 5px;
+    height: 102px;
+    margin-left: -2.5px;
+    background: #087d62;
+    animation: rotateMinute 3600s linear infinite;
+}
+
+.second-hand {
+    width: 2px;
+    height: 122px;
+    margin-left: -1px;
+    background: #df5d45;
+    animation: rotateSecond 60s linear infinite;
+}
+
+.clock-center {
+    position: absolute;
+    z-index: 6;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #087d62;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rotateSecond {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateMinute {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateHour {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.clock-step {
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    z-index: 5;
+}
+
+.step-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: #e2f3ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #087d62;
+    font-size: 23px;
+}
+
+.clock-step h3 {
+    color: #102443;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.clock-step p {
+    color: #526681;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.step-plan {
+    left: 30px;
+    top: 45px;
+}
+
+.step-focus {
+    right: 30px;
+    top: 45px;
+}
+
+.step-do {
+    right: 45px;
+    bottom: 35px;
+}
+
+.step-review {
+    left: 35px;
+    bottom: 35px;
+}
+
+
+.clock-arrow {
+    position: absolute;
+    z-index: 5;
+    color: #078267;
+    font-size: 22px;
+}
+
+.arrow-one {
+    top: 67px;
+    left: 180px;
+    transform: rotate(-25deg);
+}
+
+.arrow-two {
+    top: 245px;
+    right: 75px;
+}
+
+.arrow-three {
+    bottom: 55px;
+    left: 180px;
+    transform: rotate(25deg);
+}
+
+.arrow-four {
+    top: 240px;
+    left: 115px;
+}
+
+
+.note-area {
+    position: absolute;
+    right: 6%;
+    top: 90px;
+    width: 215px;
+    z-index: 4;
+}
+
+.note-area img {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.1));
+    transform: rotate(2deg);
+}
+
+
+.journey-section {
+    width: 100%;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.journey-title {
+    position: absolute;
+    right: 20%;
+    top: 75px;
+    color: #102443;
+    transform: rotate(-5deg);
+    text-align: center;
+    font-family: Georgia, serif;
+    z-index: 3;
+}
+
+.journey-title span {
+    display: block;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.journey-title strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 25px;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.journey-title div {
+    width: 85px;
+    height: 2px;
+    background: #087d62;
+    margin: 12px auto 0;
+    transform: rotate(-4deg);
+}
+
+
+.cta-section {
+    min-height: 190px;
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    overflow: hidden;
+    background: #e8f7f2;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 250px;
+    left: -120px;
+    bottom: -170px;
+    border-radius: 50%;
+    background: #d7efe9;
+}
+
+.cta-logo {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: #102443;
+    font-size: 21px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-logo span {
+    color: #087d62;
+    font-size: 25px;
+    transform: rotate(-25deg);
+}
+
+.cta-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h2 {
+    color: #102443;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.cta-content p {
+    color: #526681;
+    font-size: 15px;
+}
+
+.cta-button {
+    position: relative;
+    z-index: 2;
+    padding: 14px 25px;
+}
+
+
+@media (max-width: 1100px) {
+
+    .small {
+        padding: 0 25px;
+    }
+
+    .topic {
+        gap: 18px;
+    }
+
+    .topic a {
+        font-size: 13px;
+    }
+
+    .hero-text {
+        margin-left: 6%;
+    }
+
+    .hero-text h1 {
+        font-size: 42px;
+    }
+
+    .clock-intro {
+        left: 4%;
+    }
+
+    .note-area {
+        right: 2%;
+        width: 180px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .nav {
+        height: 600px;
+    }
+
+    .topic {
+        gap: 12px;
+        padding: 20px 12px;
+    }
+
+    .topic a:nth-of-type(4),
+    .topic a:nth-of-type(5),
+    .topic a:nth-of-type(6) {
+        display: none;
+    }
+
+    .hero-content {
+        top: 140px;
+    }
+
+    .hero-text {
+        width: 430px;
+        margin-left: 7%;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .principles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .clock-section {
+        min-height: 850px;
+    }
+
+    .clock-intro {
+        position: relative;
+        left: auto;
+        top: auto;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .intro-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .clock-system {
+        transform: scale(0.85);
+        transform-origin: top center;
+    }
+
+    .note-area {
+        top: 630px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 190px;
+    }
+
+    .journey-section {
+        height: 300px;
+    }
+
+    .journey-title {
+        right: 12%;
+    }
+
+    .cta-section {
+        gap: 30px;
+        padding: 30px 5%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav {
+        height: 580px;
+    }
+
+    .small {
+        padding: 10px 12px;
+    }
+
+    .topic {
+        height: 58px;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .topic a {
+        display: none;
+    }
+
+    .topic a:nth-of-type(3) {
+        display: block;
+        padding: 8px 12px;
+    }
+
+    .search {
+        width: 38px;
+    }
+
+    .topic button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .hero-content {
+        top: 125px;
+    }
+
+    .hero-text {
+        width: calc(100% - 50px);
+        margin-left: 25px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .principles {
+        grid-template-columns: 1fr;
+        max-width: 330px;
+    }
+
+    .clock-section {
+        min-height: 820px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .clock-system {
+        width: 500px;
+        margin-left: 50%;
+        transform: translateX(-50%) scale(0.68);
+        transform-origin: top center;
+    }
+
+    .note-area {
+        top: 620px;
+    }
+
+    .journey-section {
+        height: 260px;
+    }
+
+    .journey-title {
+        right: 8%;
+        top: 55px;
+    }
+
+    .journey-title span {
+        font-size: 17px;
+    }
+
+    .journey-title strong {
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 18px;
+    }
+
+    .cta-content h2 {
+        font-size: 21px;
+    }
+
+}

@@ -1,0 +1,5 @@
+1) make sticky lifeos
+
+2)make animation when pages moves up
+
+3)there should be one animation in page
